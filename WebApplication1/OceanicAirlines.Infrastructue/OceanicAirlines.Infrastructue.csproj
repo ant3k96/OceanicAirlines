@@ -34,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Dijkstra.NET, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dijkstra.NET.1.2.1\lib\net40\Dijkstra.NET.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -91,6 +94,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helpers\DijkstraHelper.cs" />
     <Compile Include="DbConnection\TransportationContext.cs" />
     <Compile Include="Migrations\202110141510141_Db-initial-migration.cs" />
     <Compile Include="Migrations\202110141510141_Db-initial-migration.designer.cs">
