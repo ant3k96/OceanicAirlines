@@ -3,3 +3,8 @@ C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\OceanicAirlines.Domai
 C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\OceanicAirlines.Domain\obj\Debug\OceanicAirlines.Domain.csproj.CoreCompileInputs.cache
 C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\OceanicAirlines.Domain\obj\Debug\OceanicAirlines.Domain.dll
 C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\OceanicAirlines.Domain\obj\Debug\OceanicAirlines.Domain.pdb
+C:\Users\anki\Source\Repos\OceanicAirlines\WebApplication1\OceanicAirlines.Domain\bin\Debug\OceanicAirlines.Domain.dll
+C:\Users\anki\Source\Repos\OceanicAirlines\WebApplication1\OceanicAirlines.Domain\bin\Debug\OceanicAirlines.Domain.pdb
+C:\Users\anki\Source\Repos\OceanicAirlines\WebApplication1\OceanicAirlines.Domain\obj\Debug\OceanicAirlines.Domain.csproj.CoreCompileInputs.cache
+C:\Users\anki\Source\Repos\OceanicAirlines\WebApplication1\OceanicAirlines.Domain\obj\Debug\OceanicAirlines.Domain.dll
+C:\Users\anki\Source\Repos\OceanicAirlines\WebApplication1\OceanicAirlines.Domain\obj\Debug\OceanicAirlines.Domain.pdb
