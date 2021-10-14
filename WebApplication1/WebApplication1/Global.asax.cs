@@ -14,6 +14,18 @@ namespace WebApplication1
     {
         protected void Application_Start()
         {
+
+            ExposeSwagger();
+
+            GlobalConfiguration.Configure(WebApiConfig.Register);
+            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+            RouteConfig.RegisterRoutes(RouteTable.Routes);
+
+        }
+
+        private static void ExposeSwagger()
+        {
+#if DEBUG
             RouteTable.Routes.MapOwinPath("swagger", app =>
             {
                 app.UseSwaggerUi3(typeof(WebApiApplication).Assembly, settings =>
@@ -22,10 +34,7 @@ namespace WebApplication1
                     settings.GeneratorSettings.DefaultUrlTemplate = "api/{controller}/{action}/{id}";
                 });
             });
-            GlobalConfiguration.Configure(WebApiConfig.Register);
-            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
-            RouteConfig.RegisterRoutes(RouteTable.Routes);
-            
+#endif
         }
     }
 }
