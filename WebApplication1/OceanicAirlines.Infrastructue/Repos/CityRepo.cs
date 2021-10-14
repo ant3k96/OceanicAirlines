@@ -49,7 +49,7 @@ namespace OceanicAirlines.Infrastructue.Repos
             {
                 var result = db.Cities.SingleOrDefault(x => x.Id == cityId.ToString());
                 if (result == null) return;
-                result.IsBlacklisted = true;
+                result.IsBlacklisted = !result.IsBlacklisted;
                 db.SaveChanges();
             }
         }

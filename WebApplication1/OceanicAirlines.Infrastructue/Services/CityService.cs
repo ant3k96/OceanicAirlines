@@ -19,17 +19,22 @@ namespace OceanicAirlines.Infrastructue.Services
         }
         public IEnumerable<City> GetBlacklisted()
         {
-            throw new NotImplementedException();
+            return _cityRepo.GetBlacklisted();
+        }
+
+        public City GetSingleByName(string name)
+        {
+            return _cityRepo.GetSingleByName(name);
         }
 
         public IEnumerable<City> GetWithKeyword(string keyword)
         {
-            throw new NotImplementedException();
+            return _cityRepo.GetWithKeyword(keyword);
         }
 
-        public void MarkAsBlacklisted(City city)
+        public void MarkAsBlacklisted(string cityId)
         {
-            throw new NotImplementedException();
+            _cityRepo.MarkAsBlacklisted(cityId);
         }
     }
 }

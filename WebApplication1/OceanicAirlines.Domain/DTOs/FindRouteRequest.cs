@@ -9,28 +9,28 @@ namespace OceanicAirlines.Domain.DTOs
     public class FindRouteRequest
     {
         private string _type;
-        private string _fromId;
-        private string _toId;
-        public string FromId 
+        private string _fromName;
+        private string _toName;
+        public string FromName 
         { 
             get
             {
-                return _fromId;
+                return _fromName;
             }
             set
             {
-                _fromId = value.ToLower();
+                _fromName = value.ToLower();
             }
         }
-        public string ToId 
+        public string ToName 
         {
             get
             {
-                return _toId;
+                return _toName;
             }
             set
             {
-                _toId = value.ToLower();
+                _toName = value.ToLower();
             }
         }
         public IEnumerable<double> Size { get; set; }

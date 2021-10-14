@@ -7,7 +7,6 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using OceanicAirlines.Infrastructue.DbConnection;
 
 namespace WebApplication1.Controllers
 {
@@ -21,18 +20,22 @@ namespace WebApplication1.Controllers
         }
         public IEnumerable<City> GetBlacklisted()
         {
-            throw new NotImplementedException();
+            return _cityService.GetBlacklisted();
         }
 
         public IEnumerable<City> GetWithKeyword(string keyword)
         {
-            throw new NotImplementedException();
+            return _cityService.GetWithKeyword(keyword);
         }
 
-        public void MarkAsBlacklisted(City city)
+        public void MarkAsBlacklisted(string cityId)
         {
-            
-           
+            _cityService.MarkAsBlacklisted(cityId);
+        }
+
+        public City GetByName(string name)
+        {
+            return _cityService.GetSingleByName(name);
         }
     }
 }

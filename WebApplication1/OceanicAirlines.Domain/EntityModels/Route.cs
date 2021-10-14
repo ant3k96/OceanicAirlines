@@ -20,3 +20,4 @@ namespace OceanicAirlines.Domain.EntityModels
         public ICollection<RouteCity> RouteCities { get; set; }
     }
 }
+

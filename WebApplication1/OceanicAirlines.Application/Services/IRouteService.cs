@@ -10,8 +10,8 @@ namespace OceanicAirlines.Application.Services
 {
     public interface IRouteService
     {
-        void Register(Route route);
-        IEnumerable<Route> GetHistory();
+        void Register(RegisterRouteRequest route);
+        IEnumerable<FindAirportRouteResponse> GetHistory();
         Route FindCheapest(FindRouteRequest request);
         Route FindFastest(FindRouteRequest request);
         FindAirportRouteResponse FindAirportsRoute(FindRouteRequest request);
