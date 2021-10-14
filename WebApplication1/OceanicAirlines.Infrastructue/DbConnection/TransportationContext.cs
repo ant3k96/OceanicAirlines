@@ -19,36 +19,6 @@ namespace OceanicAirlines.Infrastructue.DbConnection
         public DbSet<Route> Routes { get; set; }
         public DbSet<RouteCity> RoutesCities { get; set; }
         public DbSet<CityCityConnection> CityCityConnections { get; set; }
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
-            //modelBuilder.Entity<City>().
-            //    HasMany(x => x.RouteCities).
-            //    WithRequired(x=> x.City).
-            //    HasForeignKey(x=> x.CityId).WillCascadeOnDelete();
 
-            //modelBuilder.Entity<Route>().
-            //    HasMany(x => x.RouteCities).
-            //    WithRequired(x => x.Route).
-            //    HasForeignKey(x => x.RouteId).WillCascadeOnDelete();
-
-            //modelBuilder.Entity<City>().HasMany(x => x.FromCities).WithRequired(x => x.CityFrom)
-            //    .HasForeignKey(x => x.NameFrom);
-
-
-            //modelBuilder.Entity<City>().
-            //    HasMany(x => x.ToCities).
-            //    WithRequired(x => x.CityTo).
-            //    HasForeignKey(x => x.NameTo).WillCascadeOnDelete();
-            modelBuilder.Entity<CityCityConnection>().
-                HasRequired(x => x.CityFrom).
-                WithMany(x => x.FromCities).HasForeignKey(x => x.FromId)
-                .WillCascadeOnDelete();
-            modelBuilder.Entity<CityCityConnection>().
-                HasRequired(x => x.CityTo).
-                WithMany(x => x.ToCities).HasForeignKey(x => x.ToId)
-                .WillCascadeOnDelete();
-
-
-        }
     }
 }

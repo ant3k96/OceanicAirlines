@@ -14,17 +14,37 @@ namespace OceanicAirlines.Infrastructue.Services
     public class RouteService : IRouteService
     {
         private readonly IRouteRepo _routeRepo;
+        private readonly ICityRepo _cityRepo;
 
-        public RouteService(IRouteRepo routeRepo)
+        public RouteService(IRouteRepo routeRepo, ICityRepo cityRepo)
         {
             _routeRepo = routeRepo;
+            _cityRepo = cityRepo;
         }
 
         public FindAirportRouteResponse FindAirportsRoute(FindRouteRequest request)
         {
             try
             {
-                return DijkstraHelper.CountRoute(request);
+                var connections = _cityRepo.GetConnections();
+                var froms = connections.Select(x => x.CityFrom).Select(x => x.Name);
+                var tos = connections.Select(x => x.CityTo).Select(x => x.Name);
+
+                var origin = _cityRepo.GetSingleByName(request.FromId);
+                var destination = _cityRepo.GetSingleByName(request.ToId);
+
+                if (origin != null && destination != null)
+                {
+                    request.FromId = origin.Id;
+                    request.ToId = destination.Id;
+
+                    var dijkstra = new DijkstraHelper(froms, tos);
+
+                    return dijkstra.CountRoute(request);
+                }
+
+                return null;
+                
             }
             catch
             {
@@ -67,12 +87,30 @@ namespace OceanicAirlines.Infrastructue.Services
             }
         }
 
-        private static void CountForAll(IEnumerable<FindRouteRequest> request, List<FindAirportRouteResponse> list)
+        private void CountForAll(IEnumerable<FindRouteRequest> request, List<FindAirportRouteResponse> list)
         {
+            var connections = _cityRepo.GetConnections();
+            var froms = connections.Select(x => x.CityFrom).Select(x => x.Name);
+            var tos = connections.Select(x => x.CityTo).Select(x => x.Name);
+
+            var dijkstra = new DijkstraHelper(froms, tos);
+
             foreach (var req in request)
             {
-                var result = DijkstraHelper.CountRoute(req);
-                list.Add(result);
+                var origin = _cityRepo.GetSingleByName(req.FromId);
+                var destination = _cityRepo.GetSingleByName(req.ToId);
+
+                if (origin != null && destination != null)
+                {
+                    req.FromId = origin.Id;
+                    req.ToId = destination.Id;
+
+                    dijkstra.CountRoute(req);
+
+                    var result = dijkstra.CountRoute(req);
+                    list.Add(result);
+                }
+                
             }
         }
     }

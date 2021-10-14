@@ -13,15 +13,23 @@ namespace OceanicAirlines.Infrastructue.Helpers
 {
     public class DijkstraHelper
     {
+        private readonly IEnumerable<string> froms;
+        private readonly IEnumerable<string> tos;
 
-        public static FindAirportRouteResponse CountRoute(FindRouteRequest request)
+        public DijkstraHelper(IEnumerable<string> froms, IEnumerable<string> tos)
+        {
+            this.froms = froms;
+            this.tos = tos;
+        }
+
+        public FindAirportRouteResponse CountRoute(FindRouteRequest request)
         {
             var graph = GetGraph("airplane");
 
             return GetResult(graph, request);
         }
         
-        private static FindAirportRouteResponse GetResult(Graph givenGraph, FindRouteRequest request)
+        private FindAirportRouteResponse GetResult(Graph givenGraph, FindRouteRequest request)
         {
             var graph = new Graph<int, string>();
 
@@ -38,7 +46,7 @@ namespace OceanicAirlines.Infrastructue.Helpers
             return airportResult;
         }
 
-        private static FindAirportRouteResponse GetFormattedResult(Graph<int, string> graph, IEnumerable<uint> path)
+        private FindAirportRouteResponse GetFormattedResult(Graph<int, string> graph, IEnumerable<uint> path)
         {
             var duration = (path.Count() - 1) * 8;
             var cost = 420;
@@ -52,7 +60,7 @@ namespace OceanicAirlines.Infrastructue.Helpers
             return airportResult;
         }
 
-        private static IEnumerable<uint> ProcessDijkstraAlgorithm(FindRouteRequest request, Graph<int, string> graph)
+        private IEnumerable<uint> ProcessDijkstraAlgorithm(FindRouteRequest request, Graph<int, string> graph)
         {
             var result = graph.Dijkstra(uint.Parse(request.FromId) + 1, uint.Parse(request.ToId) + 1);
 
@@ -60,7 +68,7 @@ namespace OceanicAirlines.Infrastructue.Helpers
             return path;
         }
 
-        private static void CreateConnectionsBetweenNodes(Graph givenGraph, Graph<int, string> graph, List<string> union)
+        private void CreateConnectionsBetweenNodes(Graph givenGraph, Graph<int, string> graph, List<string> union)
         {
             foreach (var row in givenGraph.Rows)
             {
@@ -71,7 +79,7 @@ namespace OceanicAirlines.Infrastructue.Helpers
             }
         }
 
-        private static void AddNodesToGraph(Graph<int, string> graph, List<string> union)
+        private void AddNodesToGraph(Graph<int, string> graph, List<string> union)
         {
             foreach (var key in union)
             {
@@ -80,7 +88,7 @@ namespace OceanicAirlines.Infrastructue.Helpers
             }
         }
 
-        private static List<string> GetCitiesNames(Graph givenGraph)
+        private List<string> GetCitiesNames(Graph givenGraph)
         {
             var froms = givenGraph.Rows.Select(x => x.From).ToList().Distinct();
             var tos = givenGraph.Rows.Select(x => x.To).ToList().Distinct();
@@ -89,67 +97,11 @@ namespace OceanicAirlines.Infrastructue.Helpers
             return union;
         }
 
-        private static Graph GetGraph(string vehicleType)
+        private Graph GetGraph(string vehicleType)
         {
-            List<string> Froms = new List<string>
-            {
-                "tanger",
-                "tanger",
-                "marrakesh",
-                "marrakesh",
-                "siera leone",
-                "guld kysten",
-                "guld kysten",
-                "launda",
-                "st helena",
-                "kapstaden",
-                "kapstaden",
-                "guld kysten",
-                "tripoli",
-                "darfur",
-                "kapstaden",
-                "kapstaden",
-                "kapstaden",
-                "dragjeberget",
-                "victoria soen",
-                "amatave",
-                "darfur",
-                "suaken",
-                "suaken",
-                "kabalo"
-            };
-
-            List<string> Tos = new List<string>
-            {
-                "tripoli",
-                "marrakesh",
-                "siera leone",
-                "guld kysten",
-                "st helena",
-                "launda",
-                "hvalbugten",
-                "hvalbugten",
-                "kapstaden",
-                "kablo",
-                "hvalbuguten",
-                "tripoli",
-                "darfur",
-                "kabalo",
-                "kap st marie",
-                "dragebjerget",
-                "amatave",
-                "victorian soen",
-                "kap guardafui",
-                "kap guardafui",
-                "suaken",
-                "cairo",
-                "victorian soen",
-                "kapstaden"
-
-            };
             List<SingleConnection> list = new List<SingleConnection>();
 
-            CreateConnections(Froms, Tos, list);
+            CreateConnections(list);
 
             return new Graph
             {
@@ -158,14 +110,14 @@ namespace OceanicAirlines.Infrastructue.Helpers
             };
         }
 
-        private static void CreateConnections(List<string> Froms, List<string> Tos, List<SingleConnection> list)
+        private void CreateConnections(List<SingleConnection> list)
         {
-            for (int i = 0; i < 22; i++)
+            for (int i = 0; i < this.froms.Count(); i++)
             {
                 list.Add(new SingleConnection
                 {
-                    From = Froms[i],
-                    To = Tos[i],
+                    From = this.froms.ElementAt(i),
+                    To = this.tos.ElementAt(i),
                     Weight = 1
                 });
             }

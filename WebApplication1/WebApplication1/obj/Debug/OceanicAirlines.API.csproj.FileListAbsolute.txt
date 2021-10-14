@@ -196,3 +196,9 @@ C:\Users\anki\Source\Repos\OceanicAirlines\WebApplication1\WebApplication1\obj\D
 C:\Users\anki\Source\Repos\OceanicAirlines\WebApplication1\WebApplication1\obj\Debug\WebApplication1.dll
 C:\Users\anki\Source\Repos\OceanicAirlines\WebApplication1\WebApplication1\obj\Debug\WebApplication1.pdb
 C:\Users\anki\Source\Repos\OceanicAirlines\WebApplication1\WebApplication1\bin\Dijkstra.NET.dll
+C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\WebApplication1\bin\EntityFramework.dll
+C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\WebApplication1\bin\EntityFramework.SqlServer.dll
+C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\WebApplication1\bin\Dijkstra.NET.dll
+C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\WebApplication1\bin\OceanicAirlines.Infrastructue.dll.config
+C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\WebApplication1\bin\EntityFramework.xml
+C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\WebApplication1\bin\EntityFramework.SqlServer.xml

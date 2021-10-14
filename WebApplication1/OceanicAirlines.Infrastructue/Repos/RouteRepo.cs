@@ -32,7 +32,7 @@ namespace OceanicAirlines.Infrastructue.Repos
             }
         }
 
-        public Route GetSingle(Guid id)
+        public Route GetSingle(string id)
         {
             using (var db = new TransportationContext())
             {
