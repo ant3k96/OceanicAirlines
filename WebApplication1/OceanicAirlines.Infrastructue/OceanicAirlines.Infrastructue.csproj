@@ -81,7 +81,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repos\CityRepo.cs" />
     <Compile Include="Repos\RouteRepo.cs" />
+    <Compile Include="Services\CityService.cs" />
+    <Compile Include="Services\RouteService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -91,6 +94,11 @@
       <Project>{EB833B33-0778-4CCC-BF9C-83D5EB10BDAC}</Project>
       <Name>OceanicAirlines.Application</Name>
     </ProjectReference>
+    <ProjectReference Include="..\OceanicAirlines.Domain\OceanicAirlines.Domain.csproj">
+      <Project>{C3DA31AD-E072-49EA-8F18-F95547CBF801}</Project>
+      <Name>OceanicAirlines.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

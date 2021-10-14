@@ -1,18 +1,29 @@
 ﻿using OceanicAirlines.Application.Repos;
+using OceanicAirlines.Domain.EntityModels;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace OceanicAirlines.Infrastructue.Repos
 {
     public class RouteRepo : IRouteRepo
     {
-
-        public string GetRoute()
+        public RouteRepo()
         {
-            return "route";
+        }
+
+        public void Add(Route route)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Route> GetRouteHistory()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Route GetSingle(Guid id)
+        {
+            throw new NotImplementedException();
         }
     }
 }

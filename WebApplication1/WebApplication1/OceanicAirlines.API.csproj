@@ -173,7 +173,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Controllers\CityController.cs" />
+    <Compile Include="Controllers\RouteController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -193,6 +194,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Route\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -203,6 +205,10 @@
     <ProjectReference Include="..\OceanicAirlines.Application\OceanicAirlines.Application.csproj">
       <Project>{EB833B33-0778-4CCC-BF9C-83D5EB10BDAC}</Project>
       <Name>OceanicAirlines.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OceanicAirlines.Domain\OceanicAirlines.Domain.csproj">
+      <Project>{C3DA31AD-E072-49EA-8F18-F95547CBF801}</Project>
+      <Name>OceanicAirlines.Domain</Name>
     </ProjectReference>
     <ProjectReference Include="..\OceanicAirlines.Infrastructue\OceanicAirlines.Infrastructue.csproj">
       <Project>{2628E14B-3FDF-4D21-90EF-1C1EA1BB1EDC}</Project>

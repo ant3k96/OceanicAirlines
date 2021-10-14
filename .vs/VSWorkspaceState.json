@@ -1,10 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\WebApplication1",
-    "\\WebApplication1\\WebApplication1",
-    "\\WebApplication1\\WebApplication1\\App_Start"
+    ""
   ],
-  "SelectedNode": "\\WebApplication1\\WebApplication1\\App_Start\\RouteConfig.cs",
+  "SelectedNode": "\\WebApplication1.sln",
   "PreviewInSolutionExplorer": false
 }

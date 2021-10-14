@@ -42,7 +42,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repos\ICityRepo.cs" />
     <Compile Include="Repos\IRouteRepo.cs" />
+    <Compile Include="Services\ICityService.cs" />
+    <Compile Include="Services\IRouteService.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OceanicAirlines.Domain\OceanicAirlines.Domain.csproj">
+      <Project>{C3DA31AD-E072-49EA-8F18-F95547CBF801}</Project>
+      <Name>OceanicAirlines.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

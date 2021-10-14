@@ -32,3 +32,5 @@ C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\OceanicAirlines.Infra
 C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\OceanicAirlines.Infrastructue\obj\Debug\OceanicAirlines.Infrastructue.csproj.CopyComplete
 C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\OceanicAirlines.Infrastructue\obj\Debug\OceanicAirlines.Infrastructue.dll
 C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\OceanicAirlines.Infrastructue\obj\Debug\OceanicAirlines.Infrastructue.pdb
+C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\OceanicAirlines.Infrastructue\bin\Debug\OceanicAirlines.Domain.dll
+C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\OceanicAirlines.Infrastructue\bin\Debug\OceanicAirlines.Domain.pdb
