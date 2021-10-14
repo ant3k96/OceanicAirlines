@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace OceanicAirlines.Domain.EntityModels
@@ -6,13 +7,14 @@ namespace OceanicAirlines.Domain.EntityModels
     
     public class City
     {
-
-        [Required]
+        [Key]
         public string Id { get; set; }
-        [Required]
         public string Name { get; set; }
-        [Required]
         public bool IsBlacklisted { get; set; }
         public string Comment { get; set; }
+        public ICollection<RouteCity> RouteCities { get; set; }
+        public  ICollection<CityCityConnection> FromCities { get; set; }
+        public ICollection<CityCityConnection> ToCities { get; set; }
+
     }
 }

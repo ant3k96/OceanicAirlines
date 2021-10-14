@@ -75,7 +75,8 @@ C:\Users\anki\Source\Repos\OceanicAirlines\WebApplication1\OceanicAirlines.Infra
 C:\Users\anki\Source\Repos\OceanicAirlines\WebApplication1\OceanicAirlines.Infrastructue\obj\Debug\OceanicAirlines.Infrastructue.csproj.CopyComplete
 C:\Users\anki\Source\Repos\OceanicAirlines\WebApplication1\OceanicAirlines.Infrastructue\obj\Debug\OceanicAirlines.Infrastructue.dll
 C:\Users\anki\Source\Repos\OceanicAirlines\WebApplication1\OceanicAirlines.Infrastructue\obj\Debug\OceanicAirlines.Infrastructue.pdb
-C:\Users\anki\Source\Repos\OceanicAirlines\WebApplication1\OceanicAirlines.Infrastructue\obj\Debug\OceanicAirlines.Infrastructue.Migrations.Dbinitialmigration.resources
+C:\Users\anki\Source\Repos\OceanicAirlines\WebApplication1\OceanicAirlines.Infrastructue\bin\Debug\Dijkstra.NET.dll
+C:\Users\anki\Source\Repos\OceanicAirlines\WebApplication1\OceanicAirlines.Infrastructue\obj\Debug\OceanicAirlines.Infrastructue.Migrations.Dbmigration_ver3.resources
 C:\Users\anki\Source\Repos\OceanicAirlines\WebApplication1\OceanicAirlines.Infrastructue\obj\Debug\OceanicAirlines.Infrastructue.csproj.GenerateResource.cache
 C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\OceanicAirlines.Infrastructue\bin\Debug\OceanicAirlines.Infrastructue.dll.config
 C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\OceanicAirlines.Infrastructue\bin\Debug\Dijkstra.NET.dll

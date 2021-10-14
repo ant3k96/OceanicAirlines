@@ -1,6 +1,10 @@
-﻿namespace OceanicAirlines.Infrastructue.Migrations
+﻿using OceanicAirlines.Domain.EntityModels;
+using OceanicAirlines.Infrastructue.DbConnection;
+
+namespace OceanicAirlines.Infrastructue.Migrations
 {
     using System;
+    using System.Collections.Generic;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
@@ -9,15 +13,13 @@
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(OceanicAirlines.Infrastructue.DbConnection.TransportationContext context)
         {
-            //  This method will be called after migrating to the latest version.
-
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method
-            //  to avoid creating duplicate seed data.
+            
+            
         }
     }
 }
