@@ -15,5 +15,6 @@ namespace OceanicAirlines.Application.Services
         Route FindCheapest(FindRouteRequest request);
         Route FindFastest(FindRouteRequest request);
         FindAirportRouteResponse FindAirportsRoute(FindRouteRequest request);
+        IEnumerable<FindAirportRouteResponse> FindAirportsRoute(IEnumerable<FindRouteRequest> request);
     }
 }

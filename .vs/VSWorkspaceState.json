@@ -1,7 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\WebApplication1",
+    "\\WebApplication1\\OceanicAirlines.Infrastructue",
+    "\\WebApplication1\\OceanicAirlines.Infrastructue\\Services",
+    "\\WebApplication1\\WebApplication1",
+    "\\WebApplication1\\WebApplication1\\Controllers"
   ],
-  "SelectedNode": "\\WebApplication1.sln",
+  "SelectedNode": "\\WebApplication1\\OceanicAirlines.Infrastructue\\Services\\RouteService.cs",
   "PreviewInSolutionExplorer": false
 }
