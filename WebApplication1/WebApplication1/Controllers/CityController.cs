@@ -7,6 +7,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using OceanicAirlines.Infrastructue.DbConnection;
 
 namespace WebApplication1.Controllers
 {
@@ -30,7 +31,8 @@ namespace WebApplication1.Controllers
 
         public void MarkAsBlacklisted(City city)
         {
-            throw new NotImplementedException();
+            
+           
         }
     }
 }

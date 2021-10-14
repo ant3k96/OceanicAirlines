@@ -45,6 +45,7 @@
     <Compile Include="DTOs\FindAirportRouteResponse.cs" />
     <Compile Include="DTOs\FindRouteRequest.cs" />
     <Compile Include="EntityModels\City.cs" />
+    <Compile Include="EntityModels\CityCityConnection.cs" />
     <Compile Include="EntityModels\Route.cs" />
     <Compile Include="EntityModels\RouteCity.cs" />
     <Compile Include="EntityModels\Size.cs" />
