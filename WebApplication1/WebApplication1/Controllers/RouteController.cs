@@ -1,4 +1,5 @@
 ﻿using OceanicAirlines.Application.Services;
+using OceanicAirlines.Domain.DTOs;
 using OceanicAirlines.Domain.EntityModels;
 using System;
 using System.Collections.Generic;
@@ -17,24 +18,29 @@ namespace WebApplication1.Controllers
         {
             _routeService = routeService;
         }
-        public Route FindCheapest()
+        public Route FindCheapest(FindRouteRequest request)
         {
-            throw new NotImplementedException();
+            return _routeService.FindCheapest(request);
         }
 
-        public Route FindFastest()
+        public Route FindFastest(FindRouteRequest request)
         {
-            throw new NotImplementedException();
+            return _routeService.FindFastest(request);
+        }
+
+        public FindAirportRouteResponse FindAirportsRoute(FindRouteRequest request)
+        {
+            return _routeService.FindAirportsRoute(request);
         }
 
         public IEnumerable<Route> GetHistory()
         {
-            throw new NotImplementedException();
+            return _routeService.GetHistory();
         }
 
         public void Register(Route route)
         {
-            throw new NotImplementedException();
+            _routeService.Register(route);
         }
     }
 }

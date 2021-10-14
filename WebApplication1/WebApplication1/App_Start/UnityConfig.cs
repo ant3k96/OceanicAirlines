@@ -19,7 +19,6 @@ namespace WebApplication1
             container.RegisterType<IRouteService, RouteService>();
             container.RegisterType<ICityService, CityService>();
             
-            
             GlobalConfiguration.Configuration.DependencyResolver 
                 = new UnityDependencyResolver(container);
         }

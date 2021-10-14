@@ -42,15 +42,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DTOs\FindAirportRouteResponse.cs" />
+    <Compile Include="DTOs\FindRouteRequest.cs" />
     <Compile Include="EntityModels\City.cs" />
     <Compile Include="EntityModels\Route.cs" />
+    <Compile Include="EntityModels\RouteCity.cs" />
     <Compile Include="EntityModels\Size.cs" />
     <Compile Include="EntityModels\Type.cs" />
     <Compile Include="EntityModels\Weight.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DTOs\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

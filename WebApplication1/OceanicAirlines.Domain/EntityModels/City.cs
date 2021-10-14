@@ -7,7 +7,7 @@ namespace OceanicAirlines.Domain.EntityModels
     public class City
     {
         [Required]
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         [Required]
         public string Name { get; set; }
         [Required]

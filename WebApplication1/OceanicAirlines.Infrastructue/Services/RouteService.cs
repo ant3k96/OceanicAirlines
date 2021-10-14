@@ -1,5 +1,6 @@
 ﻿using OceanicAirlines.Application.Repos;
 using OceanicAirlines.Application.Services;
+using OceanicAirlines.Domain.DTOs;
 using OceanicAirlines.Domain.EntityModels;
 using System;
 using System.Collections.Generic;
@@ -17,12 +18,18 @@ namespace OceanicAirlines.Infrastructue.Services
         {
             _routeRepo = routeRepo;
         }
-        public Route FindCheapest()
+
+        public FindAirportRouteResponse FindAirportsRoute(FindRouteRequest request)
         {
             throw new NotImplementedException();
         }
 
-        public Route FindFastest()
+        public Route FindCheapest(FindRouteRequest request)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Route FindFastest(FindRouteRequest request)
         {
             throw new NotImplementedException();
         }

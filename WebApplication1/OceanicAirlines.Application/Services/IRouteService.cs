@@ -1,4 +1,5 @@
-﻿using OceanicAirlines.Domain.EntityModels;
+﻿using OceanicAirlines.Domain.DTOs;
+using OceanicAirlines.Domain.EntityModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,8 @@ namespace OceanicAirlines.Application.Services
     {
         void Register(Route route);
         IEnumerable<Route> GetHistory();
-        Route FindCheapest();
-        Route FindFastest();
+        Route FindCheapest(FindRouteRequest request);
+        Route FindFastest(FindRouteRequest request);
+        FindAirportRouteResponse FindAirportsRoute(FindRouteRequest request);
     }
 }
