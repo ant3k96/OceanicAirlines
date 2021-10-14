@@ -96,6 +96,8 @@
   <ItemGroup>
     <Compile Include="Helpers\DijkstraHelper.cs" />
     <Compile Include="DbConnection\TransportationContext.cs" />
+    <Compile Include="Helpers\Graph.cs" />
+    <Compile Include="Helpers\SingleConnection.cs" />
     <Compile Include="Migrations\202110141510141_Db-initial-migration.cs" />
     <Compile Include="Migrations\202110141510141_Db-initial-migration.designer.cs">
       <DependentUpon>202110141510141_Db-initial-migration.cs</DependentUpon>
