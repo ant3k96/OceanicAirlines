@@ -58,16 +58,21 @@ namespace OceanicAirlines.Infrastructue.Services
             try
             {
                 var list = new List<FindAirportRouteResponse>();
-                foreach(var req in request)
-                {
-                    var result = DijkstraHelper.CountRoute(req);
-                    list.Add(result);
-                }
+                CountForAll(request, list);
                 return list;
             }
             catch
             {
                 return null;
+            }
+        }
+
+        private static void CountForAll(IEnumerable<FindRouteRequest> request, List<FindAirportRouteResponse> list)
+        {
+            foreach (var req in request)
+            {
+                var result = DijkstraHelper.CountRoute(req);
+                list.Add(result);
             }
         }
     }

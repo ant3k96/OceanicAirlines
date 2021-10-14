@@ -21,8 +21,7 @@ namespace OceanicAirlines.Infrastructue.Repos
             {
                 db.Routes.Add(route);
                 db.SaveChanges();
-            }
-            
+            }        
         }
 
         public IEnumerable<Route> GetRouteHistory()
