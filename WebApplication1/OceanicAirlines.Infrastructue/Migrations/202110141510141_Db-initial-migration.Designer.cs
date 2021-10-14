@@ -7,13 +7,13 @@ namespace OceanicAirlines.Infrastructue.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class Dbmigrationsinitial : IMigrationMetadata
+    public sealed partial class Dbinitialmigration : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Dbmigrationsinitial));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Dbinitialmigration));
         
         string IMigrationMetadata.Id
         {
-            get { return "202110141310035_Db-migrations-initial"; }
+            get { return "202110141510141_Db-initial-migration"; }
         }
         
         string IMigrationMetadata.Source

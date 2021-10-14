@@ -92,9 +92,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DbConnection\TransportationContext.cs" />
-    <Compile Include="Migrations\202110141310035_Db-migrations-initial.cs" />
-    <Compile Include="Migrations\202110141310035_Db-migrations-initial.designer.cs">
-      <DependentUpon>202110141310035_Db-migrations-initial.cs</DependentUpon>
+    <Compile Include="Migrations\202110141510141_Db-initial-migration.cs" />
+    <Compile Include="Migrations\202110141510141_Db-initial-migration.designer.cs">
+      <DependentUpon>202110141510141_Db-initial-migration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -118,8 +118,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202110141310035_Db-migrations-initial.resx">
-      <DependentUpon>202110141310035_Db-migrations-initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202110141510141_Db-initial-migration.resx">
+      <DependentUpon>202110141510141_Db-initial-migration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
