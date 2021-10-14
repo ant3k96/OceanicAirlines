@@ -84,5 +84,5 @@ C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\OceanicAirlines.Infra
 C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\OceanicAirlines.Infrastructue\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\OceanicAirlines.Infrastructue\bin\Debug\EntityFramework.xml
 C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\OceanicAirlines.Infrastructue\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\OceanicAirlines.Infrastructue\obj\Debug\OceanicAirlines.Infrastructue.Migrations.Dbinitialmigration.resources
 C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\OceanicAirlines.Infrastructue\obj\Debug\OceanicAirlines.Infrastructue.csproj.GenerateResource.cache
+C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\OceanicAirlines.Infrastructue\obj\Debug\OceanicAirlines.Infrastructue.Migrations.Dbmigration_ver3.resources

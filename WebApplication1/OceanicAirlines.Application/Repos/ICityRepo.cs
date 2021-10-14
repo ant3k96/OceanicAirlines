@@ -9,10 +9,12 @@ namespace OceanicAirlines.Application.Repos
 {
     public interface ICityRepo
     {
-        void MarkAsBlacklisted(Guid cityId);
+        void MarkAsBlacklisted(string cityId);
         IEnumerable<City> GetBlacklisted();
         IEnumerable<City> GetAll();
         IEnumerable<City> GetWithKeyword(string keyword);
-        City GetSingle(Guid cityId);
+        City GetSingle(string cityId);
+        City GetSingleByName(string cityName);
+        IEnumerable<CityCityConnection> GetConnections();
     }
 }

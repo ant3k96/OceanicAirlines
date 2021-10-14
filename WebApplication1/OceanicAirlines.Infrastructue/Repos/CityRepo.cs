@@ -27,7 +27,7 @@ namespace OceanicAirlines.Infrastructue.Repos
             }
         }
 
-        public City GetSingle(Guid cityId)
+        public City GetSingle(string cityId)
         {
             using (var db = new TransportationContext())
             {
@@ -43,7 +43,7 @@ namespace OceanicAirlines.Infrastructue.Repos
             }
         }
 
-        public void MarkAsBlacklisted(Guid cityId)
+        public void MarkAsBlacklisted(string cityId)
         {
             using (var db = new TransportationContext())
             {
@@ -51,6 +51,31 @@ namespace OceanicAirlines.Infrastructue.Repos
                 if (result == null) return;
                 result.IsBlacklisted = true;
                 db.SaveChanges();
+            }
+        }
+
+        public IEnumerable<CityCityConnection> GetConnections()
+        {
+            using (var db = new TransportationContext())
+            {
+                var result = db.CityCityConnections.ToList();
+                foreach(var res in result)
+                {
+                    var fromCity = db.Cities.Find(res.FromId);
+                    var toCity = db.Cities.Find(res.ToId);
+                    res.CityTo = toCity;
+                    res.CityFrom = fromCity;
+                }
+                return result;
+            }
+        }
+
+        public City GetSingleByName(string cityName)
+        {
+            using (var db = new TransportationContext())
+            {
+                var result = db.Cities.FirstOrDefault(x => x.Name == cityName);      
+                return result;
             }
         }
     }

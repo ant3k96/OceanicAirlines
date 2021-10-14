@@ -11,6 +11,6 @@ namespace OceanicAirlines.Application.Repos
     {
         void Add(Route route);
         IEnumerable<Route> GetRouteHistory();
-        Route GetSingle(Guid id);
+        Route GetSingle(string id);
     }
 }
