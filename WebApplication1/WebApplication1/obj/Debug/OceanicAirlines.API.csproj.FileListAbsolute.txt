@@ -76,7 +76,6 @@ C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\WebApplication1\bin\S
 C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\WebApplication1\bin\System.Web.WebPages.Razor.xml
 C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\WebApplication1\bin\Antlr3.Runtime.pdb
 C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\WebApplication1\obj\Debug\OceanicAirlines.API.csproj.AssemblyReference.cache
 C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\WebApplication1\obj\Debug\OceanicAirlines.API.csproj.CoreCompileInputs.cache
 C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\WebApplication1\obj\Debug\OceanicAirlines.API.csproj.CopyComplete
 C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\WebApplication1\obj\Debug\WebApplication1.dll
