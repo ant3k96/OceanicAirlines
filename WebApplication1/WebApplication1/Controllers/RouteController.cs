@@ -38,12 +38,12 @@ namespace WebApplication1.Controllers
             return _routeService.FindAirportsRoute(requests);
         }
 
-        public IEnumerable<Route> GetHistory()
+        public IEnumerable<FindAirportRouteResponse> GetHistory()
         {
             return _routeService.GetHistory();
         }
 
-        public void Register(Route route)
+        public void Register(RegisterRouteRequest route)
         {
             _routeService.Register(route);
         }

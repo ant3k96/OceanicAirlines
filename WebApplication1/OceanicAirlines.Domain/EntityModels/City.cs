@@ -13,7 +13,7 @@ namespace OceanicAirlines.Domain.EntityModels
         public bool IsBlacklisted { get; set; }
         public string Comment { get; set; }
         public ICollection<RouteCity> RouteCities { get; set; }
-        public  ICollection<CityCityConnection> FromCities { get; set; }
+        public ICollection<CityCityConnection> FromCities { get; set; }
         public ICollection<CityCityConnection> ToCities { get; set; }
 
     }

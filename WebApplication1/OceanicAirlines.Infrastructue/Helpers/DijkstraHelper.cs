@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Dijkstra.NET.Graph;
 using Dijkstra.NET.ShortestPath;
 using System.Reflection;
+using OceanicAirlines.Domain.EntityModels;
 
 namespace OceanicAirlines.Infrastructue.Helpers
 {
@@ -15,11 +16,13 @@ namespace OceanicAirlines.Infrastructue.Helpers
     {
         private readonly IEnumerable<string> froms;
         private readonly IEnumerable<string> tos;
+        private readonly List<City> cities;
 
-        public DijkstraHelper(IEnumerable<string> froms, IEnumerable<string> tos)
+        public DijkstraHelper(IEnumerable<string> froms, IEnumerable<string> tos, List<City> cities)
         {
             this.froms = froms;
             this.tos = tos;
+            this.cities = cities;
         }
 
         public FindAirportRouteResponse CountRoute(FindRouteRequest request)
@@ -42,27 +45,44 @@ namespace OceanicAirlines.Infrastructue.Helpers
             var path = ProcessDijkstraAlgorithm(request, graph);
 
             var airportResult = GetFormattedResult(graph, path);
+            airportResult.Cost = CountCost(request.Weight);
+            airportResult.Type = request.Type;
+            airportResult.Weight = request.Weight;
 
             return airportResult;
+        }
+
+        private int CountCost(double weight)
+        {
+            if (weight < 1)
+            {
+                return 40;
+            } 
+            else if (1 <= weight && weight <= 5) 
+            {
+                return 60;
+            } 
+            else
+            {
+                return 80;
+            }
         }
 
         private FindAirportRouteResponse GetFormattedResult(Graph<int, string> graph, IEnumerable<uint> path)
         {
             var duration = (path.Count() - 1) * 8;
-            var cost = 420;
             var airportResult = new FindAirportRouteResponse
             {
                 Duration = duration,
-                Cost = cost,
-                ToId = graph[1].Item.ToString(),
-                FromId = graph[(uint)graph.NodesCount].Item.ToString()
+                FromId = (path.ElementAt(0)-1).ToString(),
+                ToId = (path.ElementAt(path.Count() - 1)-1).ToString()
             };
             return airportResult;
         }
 
         private IEnumerable<uint> ProcessDijkstraAlgorithm(FindRouteRequest request, Graph<int, string> graph)
         {
-            var result = graph.Dijkstra(uint.Parse(request.FromId) + 1, uint.Parse(request.ToId) + 1);
+            var result = graph.Dijkstra(uint.Parse(request.FromName) + 1, uint.Parse(request.ToName) + 1);
 
             var path = result.GetPath();
             return path;
@@ -72,10 +92,18 @@ namespace OceanicAirlines.Infrastructue.Helpers
         {
             foreach (var row in givenGraph.Rows)
             {
-                var indexFrom = (uint)union.IndexOf(row.From) + 1;
-                var indexTo = (uint)union.IndexOf(row.To) + 1;
-                graph.Connect(indexFrom, indexTo, (int)row.Weight, givenGraph.VehicleType);
-                graph.Connect(indexTo, indexFrom, (int)row.Weight, givenGraph.VehicleType);
+                var indexFrom = uint.Parse(cities.FirstOrDefault(x => x.Name == row.From).Id) + 1;
+                var indexTo = uint.Parse(cities.FirstOrDefault(x => x.Name == row.To).Id) + 1;
+
+                var isFromBlacklisted = cities.First(x => x.Name == row.From).IsBlacklisted;
+                var isToBlacklisted = cities.First(x => x.Name == row.To).IsBlacklisted;
+
+                if (!isFromBlacklisted && !isToBlacklisted)
+                {
+                    graph.Connect(indexFrom, indexTo, (int)row.Weight, givenGraph.VehicleType);
+                    graph.Connect(indexTo, indexFrom, (int)row.Weight, givenGraph.VehicleType);
+                }
+                
             }
         }
 
