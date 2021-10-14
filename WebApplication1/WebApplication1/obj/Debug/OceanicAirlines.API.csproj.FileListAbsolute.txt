@@ -80,3 +80,15 @@ C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\WebApplication1\obj\D
 C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\WebApplication1\obj\Debug\OceanicAirlines.API.csproj.CopyComplete
 C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\WebApplication1\obj\Debug\WebApplication1.dll
 C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\WebApplication1\obj\Debug\WebApplication1.pdb
+C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\WebApplication1\bin\OceanicAirlines.Application.dll
+C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\WebApplication1\bin\OceanicAirlines.Infrastructue.dll
+C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\WebApplication1\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\WebApplication1\bin\Unity.Abstractions.dll
+C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\WebApplication1\bin\Unity.Container.dll
+C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\WebApplication1\bin\OceanicAirlines.Application.pdb
+C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\WebApplication1\bin\OceanicAirlines.Infrastructue.pdb
+C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\WebApplication1\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\WebApplication1\bin\Unity.Abstractions.pdb
+C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\WebApplication1\bin\Unity.Container.pdb
+C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\WebApplication1\obj\Debug\OceanicAirlines.API.csproj.AssemblyReference.cache
+C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\WebApplication1\bin\Unity.WebApi.dll
