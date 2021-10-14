@@ -26,7 +26,6 @@ namespace WebApplication1
 
         private static void ExposeSwagger()
         {
-#if DEBUG
             RouteTable.Routes.MapOwinPath("swagger", app =>
             {
                 app.UseSwaggerUi3(typeof(WebApiApplication).Assembly, settings =>
@@ -35,7 +34,6 @@ namespace WebApplication1
                     settings.GeneratorSettings.DefaultUrlTemplate = "api/{controller}/{action}/{id}";
                 });
             });
-#endif
         }
     }
 }

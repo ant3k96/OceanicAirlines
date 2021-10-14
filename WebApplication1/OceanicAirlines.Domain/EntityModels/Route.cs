@@ -21,6 +21,8 @@ namespace OceanicAirlines.Domain.EntityModels
         public Size PackageSize { get; set; }
         [Required]
         public Weight PackageWeight { get; set; }
+        [Required]
+        public Type PackageType { get; set; }
         public IEnumerable<City> GoThroughLocations { get; set; }
     }
 }
