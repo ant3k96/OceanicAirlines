@@ -5,8 +5,9 @@
     "\\WebApplication1\\OceanicAirlines.Infrastructue",
     "\\WebApplication1\\OceanicAirlines.Infrastructue\\Services",
     "\\WebApplication1\\WebApplication1",
+    "\\WebApplication1\\WebApplication1\\App_Start",
     "\\WebApplication1\\WebApplication1\\Controllers"
   ],
-  "SelectedNode": "\\WebApplication1\\OceanicAirlines.Infrastructue\\Services\\RouteService.cs",
+  "SelectedNode": "\\WebApplication1\\WebApplication1\\App_Start\\UnityConfig.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -16,40 +16,31 @@ namespace OceanicAirlines.Infrastructue.Helpers
 
         public static FindAirportRouteResponse CountRoute(FindRouteRequest request)
         {
-            var graph = ReadFile("airplane");
+            var graph = GetGraph("airplane");
 
-            return GetDefaultDict(graph, request);
-
+            return GetResult(graph, request);
         }
         
-        private static FindAirportRouteResponse GetDefaultDict(Graph givenGraph, FindRouteRequest request)
+        private static FindAirportRouteResponse GetResult(Graph givenGraph, FindRouteRequest request)
         {
             var graph = new Graph<int, string>();
 
-            var froms = givenGraph.Rows.Select(x => x.From).ToList().Distinct();
-            var tos = givenGraph.Rows.Select(x => x.To).ToList().Distinct();
+            var cityNames = GetCitiesNames(givenGraph);
 
-            var union = froms.Concat(tos).Distinct().ToList();
+            AddNodesToGraph(graph, cityNames);
 
-            foreach (var key in union)
-            {
-                var id = union.IndexOf(key);
-                graph.AddNode(id);
-            }
+            CreateConnectionsBetweenNodes(givenGraph, graph, cityNames);
 
-            foreach(var row in givenGraph.Rows)
-            {
-                var indexFrom = (uint)union.IndexOf(row.From) + 1;
-                var indexTo = (uint)union.IndexOf(row.To) + 1;
-                graph.Connect(indexFrom, indexTo, (int)row.Weight, givenGraph.VehicleType);
-                graph.Connect(indexTo, indexFrom, (int)row.Weight, givenGraph.VehicleType);
-            }
+            var path = ProcessDijkstraAlgorithm(request, graph);
 
-            var result = graph.Dijkstra(uint.Parse(request.FromId) + 1, uint.Parse(request.ToId) + 1);
+            var airportResult = GetFormattedResult(graph, path);
 
-            var path = result.GetPath();
+            return airportResult;
+        }
 
-            var duration = (path.Count() - 1)  * 8;
+        private static FindAirportRouteResponse GetFormattedResult(Graph<int, string> graph, IEnumerable<uint> path)
+        {
+            var duration = (path.Count() - 1) * 8;
             var cost = 420;
             var airportResult = new FindAirportRouteResponse
             {
@@ -58,11 +49,47 @@ namespace OceanicAirlines.Infrastructue.Helpers
                 ToId = graph[1].Item.ToString(),
                 FromId = graph[(uint)graph.NodesCount].Item.ToString()
             };
-
             return airportResult;
         }
 
-        private static Graph ReadFile(string vehicleType)
+        private static IEnumerable<uint> ProcessDijkstraAlgorithm(FindRouteRequest request, Graph<int, string> graph)
+        {
+            var result = graph.Dijkstra(uint.Parse(request.FromId) + 1, uint.Parse(request.ToId) + 1);
+
+            var path = result.GetPath();
+            return path;
+        }
+
+        private static void CreateConnectionsBetweenNodes(Graph givenGraph, Graph<int, string> graph, List<string> union)
+        {
+            foreach (var row in givenGraph.Rows)
+            {
+                var indexFrom = (uint)union.IndexOf(row.From) + 1;
+                var indexTo = (uint)union.IndexOf(row.To) + 1;
+                graph.Connect(indexFrom, indexTo, (int)row.Weight, givenGraph.VehicleType);
+                graph.Connect(indexTo, indexFrom, (int)row.Weight, givenGraph.VehicleType);
+            }
+        }
+
+        private static void AddNodesToGraph(Graph<int, string> graph, List<string> union)
+        {
+            foreach (var key in union)
+            {
+                var id = union.IndexOf(key);
+                graph.AddNode(id);
+            }
+        }
+
+        private static List<string> GetCitiesNames(Graph givenGraph)
+        {
+            var froms = givenGraph.Rows.Select(x => x.From).ToList().Distinct();
+            var tos = givenGraph.Rows.Select(x => x.To).ToList().Distinct();
+
+            var union = froms.Concat(tos).Distinct().ToList();
+            return union;
+        }
+
+        private static Graph GetGraph(string vehicleType)
         {
             List<string> Froms = new List<string>
             {
@@ -121,16 +148,8 @@ namespace OceanicAirlines.Infrastructue.Helpers
 
             };
             List<SingleConnection> list = new List<SingleConnection>();
-            
-            for(int i=0; i<22; i++)
-            {
-                list.Add(new SingleConnection
-                {
-                    From = Froms[i],
-                    To = Tos[i],
-                    Weight = 1
-                });
-            }             
+
+            CreateConnections(Froms, Tos, list);
 
             return new Graph
             {
@@ -138,25 +157,18 @@ namespace OceanicAirlines.Infrastructue.Helpers
                 VehicleType = vehicleType
             };
         }
-    }
 
-    public class Graph
-    {
-        public List<SingleConnection> Rows { get; set; }
-        public string VehicleType { get; set; }
-    }
-
-    public class SingleConnection
-    {
-        public string From { get; set; }
-        public string To { get; set; }
-        public double Weight { get; set; }
-    }
-
-    public class ConnectionForCity
-    {
-        public double Weight { get; set; }
-        public string To { get; set; }
-        public string VehicleType { get; set; }
+        private static void CreateConnections(List<string> Froms, List<string> Tos, List<SingleConnection> list)
+        {
+            for (int i = 0; i < 22; i++)
+            {
+                list.Add(new SingleConnection
+                {
+                    From = Froms[i],
+                    To = Tos[i],
+                    Weight = 1
+                });
+            }
+        }
     }
 }

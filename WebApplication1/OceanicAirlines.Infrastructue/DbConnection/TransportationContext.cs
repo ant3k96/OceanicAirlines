@@ -14,7 +14,6 @@ namespace OceanicAirlines.Infrastructue.DbConnection
         public TransportationContext() : base("name = TransportationContext")
         {
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<TransportationContext, Migrations.Configuration>());
-
         }
         public DbSet<City> Cities { get; set; }
         public DbSet<Route> Routes { get; set; }
