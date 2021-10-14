@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OceanicAirlines.Application.Repos;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -9,6 +10,12 @@ namespace WebApplication1.Controllers
 {
     public class ValuesController : ApiController
     {
+        private readonly IRouteRepo _routeRepo;
+
+        public ValuesController(IRouteRepo routeRepo)
+        {
+            _routeRepo = routeRepo;
+        }
         // GET api/values
         public IEnumerable<string> Get()
         {
@@ -18,7 +25,7 @@ namespace WebApplication1.Controllers
         // GET api/values/5
         public string Get(int id)
         {
-            return "value";
+            return _routeRepo.GetRoute();
         }
 
         // POST api/values

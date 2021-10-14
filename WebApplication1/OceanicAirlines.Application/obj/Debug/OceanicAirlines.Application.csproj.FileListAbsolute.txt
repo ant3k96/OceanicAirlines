@@ -1,0 +1,5 @@
+C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\OceanicAirlines.Application\bin\Debug\OceanicAirlines.Application.dll
+C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\OceanicAirlines.Application\bin\Debug\OceanicAirlines.Application.pdb
+C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\OceanicAirlines.Application\obj\Debug\OceanicAirlines.Application.csproj.CoreCompileInputs.cache
+C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\OceanicAirlines.Application\obj\Debug\OceanicAirlines.Application.dll
+C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\OceanicAirlines.Application\obj\Debug\OceanicAirlines.Application.pdb
