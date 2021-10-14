@@ -19,6 +19,8 @@ namespace OceanicAirlines.Domain.EntityModels
         public Guid ToId { get; set; }
         [Required]
         public Size PackageSize { get; set; }
+        [Required]
+        public Weight PackageWeight { get; set; }
         public IEnumerable<City> GoThroughLocations { get; set; }
     }
 }
