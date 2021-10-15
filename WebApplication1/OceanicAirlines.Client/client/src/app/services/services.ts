@@ -22,7 +22,7 @@ export class CityClient {
 
     constructor(@Inject(HttpClient) http: HttpClient, @Optional() @Inject(API_BASE_URL) baseUrl?: string) {
         this.http = http;
-        this.baseUrl = baseUrl !== undefined && baseUrl !== null ? baseUrl : "https://localhost:44343";
+        this.baseUrl = baseUrl !== undefined && baseUrl !== null ? baseUrl : "http://wa-oa-t1.azurewebsites.net";
     }
 
     getBlacklisted(): Observable<City[] | null> {
@@ -231,7 +231,7 @@ export class RouteClient {
 
     constructor(@Inject(HttpClient) http: HttpClient, @Optional() @Inject(API_BASE_URL) baseUrl?: string) {
         this.http = http;
-        this.baseUrl = baseUrl !== undefined && baseUrl !== null ? baseUrl : "https://localhost:44343";
+        this.baseUrl = baseUrl !== undefined && baseUrl !== null ? baseUrl : "http://wa-oa-t1.azurewebsites.net";
     }
 
     findCheapest(request: FindRouteRequest | null | undefined): Observable<Route | null> {
