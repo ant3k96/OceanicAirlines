@@ -1,14 +1,9 @@
 ﻿using OceanicAirlines.Application.Services;
 using OceanicAirlines.Domain.DTOs;
 using OceanicAirlines.Domain.EntityModels;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Http;
 using System.Web.Http.Cors;
-using System.Web.Mvc;
-using WebApplication1.Cors;
 
 namespace WebApplication1.Controllers
 {

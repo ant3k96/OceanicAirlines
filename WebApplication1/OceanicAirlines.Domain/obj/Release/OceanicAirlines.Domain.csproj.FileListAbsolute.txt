@@ -1,0 +1,6 @@
+C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\OceanicAirlines.Domain\bin\Release\OceanicAirlines.Domain.dll
+C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\OceanicAirlines.Domain\bin\Release\OceanicAirlines.Domain.pdb
+C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\OceanicAirlines.Domain\obj\Release\OceanicAirlines.Domain.csproj.AssemblyReference.cache
+C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\OceanicAirlines.Domain\obj\Release\OceanicAirlines.Domain.csproj.CoreCompileInputs.cache
+C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\OceanicAirlines.Domain\obj\Release\OceanicAirlines.Domain.dll
+C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\OceanicAirlines.Domain\obj\Release\OceanicAirlines.Domain.pdb
