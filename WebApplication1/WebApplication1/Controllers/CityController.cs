@@ -7,9 +7,12 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
+using WebApplication1.Cors;
 
 namespace WebApplication1.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class CityController : ApiController
     {
         private readonly ICityService _cityService;

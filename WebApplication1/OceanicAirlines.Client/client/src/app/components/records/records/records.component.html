@@ -1,0 +1,18 @@
+<mat-card *ngFor="let response of responses" style="margin-block-start: 10vh; margin-inline: 40vh;">
+  <div style="width: 100%; display: flex; justify-content: center;">
+    <mat-card style="margin-inline-end: 10vh;">
+      <h1>From: {{response.FromName}}</h1>
+    </mat-card> <mat-card>
+      <h1>To: {{response.ToName}}</h1>
+    </mat-card>
+  </div>
+  <mat-card style="width: 100%; display: flex; justify-content: center; margin-top: 6vh;">
+    <div style="width: 50%; display: flex; justify-content: center;">
+      <h3 style="margin-block: 5px;">Price: {{response.Cost}} $</h3>
+    </div>
+    <div style="width: 50%; display: flex; justify-content: center;">
+      <h3 style="margin-block: 5px;">Duration: {{response.Duration}} hours</h3>
+    </div>
+
+  </mat-card>
+</mat-card>

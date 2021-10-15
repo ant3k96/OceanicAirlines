@@ -1,0 +1,85 @@
+<table mat-table [dataSource]="sizes" class="mat-elevation-z8" style="margin-top: 10vh; margin-inline: 10vh;">
+
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="size">
+    <th mat-header-cell *matHeaderCellDef>Size</th>
+    <td mat-cell *matCellDef="let element"> {{element.size}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="<1kg">
+    <th mat-header-cell *matHeaderCellDef> <1kg </th>
+    <td mat-cell *matCellDef="let element"> {{element['<1kg']}} </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="1-5kg">
+    <th mat-header-cell *matHeaderCellDef> 1-5kg </th>
+    <td mat-cell *matCellDef="let element"> {{element['1-5kg']}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef=">5kg">
+    <th mat-header-cell *matHeaderCellDef> >5kg </th>
+    <td mat-cell *matCellDef="let element"> {{element['>5kg']}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedSizes"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedSizes;"></tr>
+</table>
+
+
+<table mat-table [dataSource]="sizesSecond" class="mat-elevation-z8" style="margin-top: 10vh; margin-inline: 10vh;">
+
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="size">
+    <th mat-header-cell *matHeaderCellDef>Size</th>
+    <td mat-cell *matCellDef="let element"> {{element.size}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="Height (max cm)">
+    <th mat-header-cell *matHeaderCellDef> Height (max cm) </th>
+    <td mat-cell *matCellDef="let element"> {{element['Height (max cm)']}} </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="Depth (max cm)">
+    <th mat-header-cell *matHeaderCellDef> Depth (max cm) </th>
+    <td mat-cell *matCellDef="let element"> {{element['Depth (max cm)']}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="Breadth (max cm)">
+    <th mat-header-cell *matHeaderCellDef> >Breadth (max cm) </th>
+    <td mat-cell *matCellDef="let element"> {{element['Breadth (max cm)']}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedSizesSecond"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedSizesSecond;"></tr>
+</table>
+
+<table mat-table [dataSource]="thirdTable" class="mat-elevation-z8" style="margin-top: 10vh; margin-inline: 10vh;">
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="fee">
+    <th mat-header-cell *matHeaderCellDef>Fee</th>
+    <td mat-cell *matCellDef="let element"> {{element.fee}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="oa">
+    <th mat-header-cell *matHeaderCellDef> OA </th>
+    <td mat-cell *matCellDef="let element"> {{element.oa}} </td>
+  </ng-container>
+
+
+  <tr mat-header-row *matHeaderRowDef="displayedThird"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedThird;"></tr>
+</table>

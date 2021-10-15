@@ -1,0 +1,82 @@
+<mat-card>
+  <mat-tab-group>
+    <mat-tab label="Search">
+    <div style="display: flex; justify-content: center; width: 100%;">
+        <form class="example-form" style="margin-top: 50px;" [formGroup]="searchForm" >
+          <mat-form-field class="example-full-width" appearance="fill" style="margin-right: 30px; width: 400px;">
+            <mat-label>Origin</mat-label>
+            <input formControlName="origin"  matInput placeholder="Search" >
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width" appearance="fill" style="width: 400px;">
+            <mat-label>Destination</mat-label>
+            <input formControlName="destination"  matInput placeholder="Search" >
+          </mat-form-field>
+        </form>
+    </div>
+    <div style="display: flex; justify-content: center; width: 100%;">
+      <div style="width: 33%; display: flex; justify-content: center;">
+
+        <mat-radio-group aria-label="Select an option">
+          <p>Select weight of the package</p>
+          <mat-radio-button [checked]="true" value="1" style="width: 100%; margin-block: 8px;">Less than 1kg</mat-radio-button>
+          <mat-radio-button value="2" style="width: 100%; margin-block: 8px;">1-5kg</mat-radio-button>
+          <mat-radio-button value="2" style="width: 100%; margin-block: 8px;">More than 5kg</mat-radio-button>
+        </mat-radio-group>
+      </div>
+      <div style="width: 33%; display: flex; justify-content: center;">
+
+        <mat-radio-group aria-label="Select an option">
+          <p>Select size of the package</p>
+          <mat-radio-button [checked]="true"  value="1" style="width: 100%; margin-block: 8px;">Small - A</mat-radio-button>
+          <mat-radio-button value="2" style="width: 100%; margin-block: 8px;">Medium - B</mat-radio-button>
+          <mat-radio-button value="2" style="width: 100%; margin-block: 8px;">Big - C</mat-radio-button>
+        </mat-radio-group>
+      </div>
+      <div style="width: 33%; display: flex; justify-content: center;">
+
+        <section class="example-section">
+          <p>Select extra requirements</p>
+          <mat-checkbox class="example-margin" style="width: 100%; margin-block: 8px;">Weapons</mat-checkbox>
+          <mat-checkbox class="example-margin" style="width: 100%; margin-block: 8px;">Cautious parcels</mat-checkbox>
+          <mat-checkbox class="example-margin" style="width: 100%; margin-block: 8px;">Refrigirated goods</mat-checkbox>
+        </section>
+      </div>
+    </div>
+    <div style="display: flex; justify-content: flex-end; width: 100%;">
+      <button [disabled]="searchForm.invalid" (click)="search()" mat-raised-button color="accent" style="width: 200px; margin-right: 30vh; margin-block: 5vh;">Search</button>
+    </div>
+
+  </mat-tab>
+    <mat-tab label="Package Info"><app-info></app-info></mat-tab>
+    <mat-tab label="Records"><app-records></app-records></mat-tab>
+    <mat-tab label="Ommited Cities"><app-blacklisted></app-blacklisted></mat-tab>
+    <mat-tab label="Contact">
+      <div style="justify-content: center; display: flex; width: 100%; margin-top: 10px;">
+        <h1>OceanicAirlines</h1>
+      </div>
+      <div style="justify-content: center; display: flex; width: 100%;">
+        <h1>+48 420 024</h1>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</mat-card>
+<mat-card *ngIf="response" style="margin-block-start: 10vh; margin-inline: 40vh;">
+  <div style="width: 100%; display: flex; justify-content: center;">
+    <mat-card style="margin-inline-end: 10vh;">
+      <h1>From: {{response.FromName}}</h1>
+    </mat-card> <mat-card>
+      <h1>To: {{response.ToName}}</h1>
+    </mat-card>
+  </div>
+  <div style="width: 100%; display: flex; justify-content: center; margin-top: 6vh;">
+    <div style="width: 33%; display: flex; justify-content: center;">
+      <h3 style="margin-block: 5px;">Price: {{response.Cost}} $</h3>
+    </div>
+    <div style="width: 33%; display: flex; justify-content: center;">
+      <h3 style="margin-block: 5px;">Duration: {{response.Duration}} hours</h3></div>
+    <div style="width: 33%; display: flex; justify-content: center;">
+      <button (click)="registerRoute()" mat-raised-button color="accent" style="width: 50%; margin-block: 5vh;">Log record</button></div>
+    </div>
+</mat-card>
+
