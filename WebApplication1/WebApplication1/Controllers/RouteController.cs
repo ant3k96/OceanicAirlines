@@ -6,10 +6,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using System.Web.Mvc;
+using WebApplication1.Cors;
 
 namespace WebApplication1.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class RouteController : ApiController
     {
         private readonly IRouteService _routeService;
@@ -27,7 +30,7 @@ namespace WebApplication1.Controllers
         {
             return _routeService.FindFastest(request);
         }
-
+        
         public FindAirportRouteResponse FindAirportsRoute(FindRouteRequest request)
         {
             return _routeService.FindAirportsRoute(request);

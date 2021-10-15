@@ -1,0 +1,22 @@
+<div style="display: flex; justify-content: center; width: 100%; margin-top: 10vh;">
+
+  <mat-form-field class="example-full-width" appearance="fill" style="width: 400px;">
+    <mat-label>Origin</mat-label>
+    <input [formControl]="blacklistId" matInput placeholder="Search" >
+  </mat-form-field>
+</div>
+
+<div style="display: flex; justify-content: center; width: 100%;">
+  <button [disabled]="blacklistId.invalid" (click)="markAsBlacklisted()" mat-raised-button color="accent" style="width: 200px; margin-block: 5vh;">Change Status</button>
+</div>
+<mat-card *ngFor="let response of responses; let i = index" style="margin-block-start: 10vh; margin-inline: 40vh;">
+  <h1 style="width: 100%;">{{i+1}}. Omiited city</h1>
+  <div style="width: 100%; display: flex; justify-content: center;">
+
+    <mat-card style="width: 100%; margin-inline-end: 10vh;">
+      <h1>Name: {{response.Name}}</h1>
+    </mat-card> <mat-card>
+      <h1>Id: {{response.Id}}</h1>
+    </mat-card>
+  </div>
+</mat-card>

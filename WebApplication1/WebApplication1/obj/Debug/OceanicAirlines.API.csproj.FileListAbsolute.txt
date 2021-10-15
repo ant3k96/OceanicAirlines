@@ -202,3 +202,6 @@ C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\WebApplication1\bin\D
 C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\WebApplication1\bin\OceanicAirlines.Infrastructue.dll.config
 C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\WebApplication1\bin\EntityFramework.xml
 C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\WebApplication1\bin\EntityFramework.SqlServer.xml
+C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\WebApplication1\bin\System.Web.Cors.dll
+C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\WebApplication1\bin\System.Web.Http.Cors.dll
+C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\WebApplication1\bin\System.Web.Http.Cors.xml
