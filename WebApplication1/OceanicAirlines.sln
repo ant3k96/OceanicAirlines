@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OceanicAirlines.Infrastruct
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OceanicAirlines.Domain", "OceanicAirlines.Domain\OceanicAirlines.Domain.csproj", "{C3DA31AD-E072-49EA-8F18-F95547CBF801}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "UnitTestProject1\UnitTestProject1.csproj", "{CDA7D46D-827C-49A7-970B-E2AEC7ADB239}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{C3DA31AD-E072-49EA-8F18-F95547CBF801}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3DA31AD-E072-49EA-8F18-F95547CBF801}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3DA31AD-E072-49EA-8F18-F95547CBF801}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDA7D46D-827C-49A7-970B-E2AEC7ADB239}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDA7D46D-827C-49A7-970B-E2AEC7ADB239}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDA7D46D-827C-49A7-970B-E2AEC7ADB239}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDA7D46D-827C-49A7-970B-E2AEC7ADB239}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

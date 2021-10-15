@@ -10,3 +10,8 @@ C:\Users\anki\Source\Repos\OceanicAirlines\WebApplication1\OceanicAirlines.Domai
 C:\Users\anki\Source\Repos\OceanicAirlines\WebApplication1\OceanicAirlines.Domain\obj\Debug\OceanicAirlines.Domain.pdb
 C:\Users\anki\Source\Repos\OceanicAirlines\WebApplication1\OceanicAirlines.Domain\obj\Debug\OceanicAirlines.Domain.csprojAssemblyReference.cache
 C:\Users\bapi\source\repos\OceanicAirlines\WebApplication1\OceanicAirlines.Domain\obj\Debug\OceanicAirlines.Domain.csproj.AssemblyReference.cache
+C:\Users\anki\source\repos\deploy\OceanicAirlines\WebApplication1\OceanicAirlines.Domain\bin\Debug\OceanicAirlines.Domain.dll
+C:\Users\anki\source\repos\deploy\OceanicAirlines\WebApplication1\OceanicAirlines.Domain\bin\Debug\OceanicAirlines.Domain.pdb
+C:\Users\anki\source\repos\deploy\OceanicAirlines\WebApplication1\OceanicAirlines.Domain\obj\Debug\OceanicAirlines.Domain.csproj.CoreCompileInputs.cache
+C:\Users\anki\source\repos\deploy\OceanicAirlines\WebApplication1\OceanicAirlines.Domain\obj\Debug\OceanicAirlines.Domain.dll
+C:\Users\anki\source\repos\deploy\OceanicAirlines\WebApplication1\OceanicAirlines.Domain\obj\Debug\OceanicAirlines.Domain.pdb
