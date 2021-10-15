@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<parameters>
-  <parameter name="TransportationContext-Web.config Connection String" description="TransportationContext Connection String used in web.config by the application to access the database." defaultValue="Server=tcp:dbs-oa-t1.database.windows.net,1433;Initial Catalog=db-oa-t1;User ID=admin-oa-t1;Password=oceanicFlyAway16;Connection Timeout=30" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="C:\\Users\\bapi\\Source\\Repos\\OceanicAirlines\\WebApplication1\\WebApplication1\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='TransportationContext']/@connectionString" />
-  </parameter>
-</parameters>

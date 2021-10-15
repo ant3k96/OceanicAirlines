@@ -1,0 +1,9 @@
+C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\OceanicAirlines.Application\bin\Release\OceanicAirlines.Application.dll
+C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\OceanicAirlines.Application\bin\Release\OceanicAirlines.Application.pdb
+C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\OceanicAirlines.Application\bin\Release\OceanicAirlines.Domain.dll
+C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\OceanicAirlines.Application\bin\Release\OceanicAirlines.Domain.pdb
+C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\OceanicAirlines.Application\obj\Release\OceanicAirlines.Application.csproj.AssemblyReference.cache
+C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\OceanicAirlines.Application\obj\Release\OceanicAirlines.Application.csproj.CoreCompileInputs.cache
+C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\OceanicAirlines.Application\obj\Release\OceanicAirlines.Application.csproj.CopyComplete
+C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\OceanicAirlines.Application\obj\Release\OceanicAirlines.Application.dll
+C:\Users\bapi\Source\Repos\OceanicAirlines\WebApplication1\OceanicAirlines.Application\obj\Release\OceanicAirlines.Application.pdb
